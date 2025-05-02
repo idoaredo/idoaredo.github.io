@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  (function() {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - idoaredo Cybersecurity Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+
+  <script src="assets/js/script.js" defer></script>
+</head><body>
+<main>
+<nav class="navbar">
+  <div class="container nav-container">
+    <span class="logo">eduardo - portfolio</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+      <input type="text" id="search-input" class="search-input" placeholder="Search experiments..." />
+      <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+    </div>
+  </div>
+</nav>
+<section id="projects" class="section">
+<div class="projects-feed">
+    <article id="project-network-packet-analyzer" class="project-entry">
+      <div class="project-date">2025-01-10</div>
+      <h3><a href="#">Network Packet Analyzer</a></h3>
+      <p>A tool to capture and analyze network traffic patterns in real-time.</p>
+    </article>
+    <article id="project-vulnerability-scanner" class="project-entry">
+      <div class="project-date">2025-02-05</div>
+      <h3><a href="#">Web App Vulnerability Scanner</a></h3>
+      <p>Automated scanner to detect common web vulnerabilities.</p>
+    </article>
+    <article id="project-phishing-awareness-platform" class="project-entry">
+      <div class="project-date">2025-03-15</div>
+      <h3><a href="#">Phishing Awareness Platform</a></h3>
+      <p>Interactive training simulations to teach phishing detection.</p>
+    </article>
+    <article id="project-malware-sandbox" class="project-entry">
+      <div class="project-date">2025-04-01</div>
+      <h3><a href="#">Malware Sandbox Environment</a></h3>
+      <p>Isolated virtual environment for safe malware analysis.</p>
+    </article>
+    <article id="project-password-strength-evaluator" class="project-entry">
+      <div class="project-date">2025-04-20</div>
+      <h3><a href="#">Password Strength Evaluator</a></h3>
+      <p>Analyzes password entropy and suggests improvements.</p>
+    </article>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container"><p>&copy; 2025 idoaredo. All rights reserved.</p></div>
+</footer>
+</body></html>
