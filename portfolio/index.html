@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  (function() {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>idoaredo - Cybersecurity Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+
+  <script src="assets/js/typed.min.js" defer></script><script src="assets/js/particles.min.js" defer></script><script src="assets/js/script.js" defer></script>
+</head><body>
+<main>
+<nav class="navbar">
+  <div class="container nav-container">
+    <span class="logo">eduardo - portfolio</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+      <input type="text" id="search-input" class="search-input" placeholder="Search experiments..." />
+      <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+    </div>
+  </div>
+</nav>
+<section id="home" class="hero"><div id="particles-js"></div>
+  <div class="hero-content">
+    <h1>Olá! I'm Eduardo!</h1>
+    <h2><span id="typed"></span></h2>
+    <p class="hero-about">
+I am an eager learner with a deep passion for the field of cybersecurity, and it is an honor to have you explore my portfolio/repository. My motivation for entering this field stems primarily from frustrating personal experiences: I was a victim of several cyberattacks in the past due to my lack of understanding of digital security risks. Even today, I still face threats, which only strengthens my desire to ensure that others do not go through the same situations.<br><br>
+I have been working hard to progress in this journey, firmly believing in the power of continuous effort and learning. I am a dedicated, detail-oriented, and meticulous professional with a strong appreciation for analytical thinking and patience.<br><br>
+Currently, I am pursuing a postgraduate degree in Cybersecurity and Data Governance while also complementing my education with additional courses to further deepen my knowledge. The purpose of this repository is to share my practical experiences and learnings on risk mitigation, incident response, and continuous process improvement in the field of cybersecurity.<br><br>
+I believe that cybersecurity is a dynamic field that requires constant learning, and I am committed to contributing to creating safer and more secure environments.
+</p>
+    <div class="social">
+      <a href="https://github.com/idoaredo" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/idoaredo" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="container"><p>&copy; 2025 idoaredo. All rights reserved.</p></div>
+</footer>
+</body></html>
