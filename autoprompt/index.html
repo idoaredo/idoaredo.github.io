@@ -633,8 +633,8 @@ pre.ce-block{background:#0d1117;color:#e2e8f0;padding:14px 16px;border-radius:va
   </div>
   <select class="h-select" id="model-sel" onchange="onModelChange()"></select>
   <div class="lang-toggle">
-    <button class="lang-btn on" onclick="setLang('pt')" id="lbtn-pt">PT</button>
-    <button class="lang-btn"   onclick="setLang('en')" id="lbtn-en">EN</button>
+    <button class="lang-btn"    onclick="setLang('pt')" id="lbtn-pt">PT</button>
+    <button class="lang-btn on" onclick="setLang('en')" id="lbtn-en">EN</button>
   </div>
   <button class="help-btn" id="help-btn" onclick="showHelp()" title="Ajuda / Help">?</button>
   <button class="dark-toggle" id="dark-toggle" onclick="toggleDarkMode()" title="Dark mode" style="font-size:0">
@@ -1192,7 +1192,7 @@ function _loadVarVals() {
 //  STATE
 // ══════════════════════════════════════════════════════════
 let S = {
-  lang: 'pt',
+  lang: 'en',
   mode: 'text',
   fw: 'COSTAR',
   technique: 'none',
