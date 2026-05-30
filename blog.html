@@ -1,79 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-    if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
-  </script>
+  <script>if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Blog — Eduardo's notes, writeups, and thoughts on cybersecurity." />
+  <meta name="description" content="Blog — Eduardo Grandide Brito. Notes, writeups, and thoughts on cybersecurity." />
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self';
              script-src 'self' 'unsafe-inline';
-             style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-             font-src https://fonts.gstatic.com;
+             style-src 'self' 'unsafe-inline';
              img-src 'self' data:;
              object-src 'none';
              base-uri 'self';" />
-  <title>Blog — Eduardo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <title>Blog — Eduardo Grandide Brito</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">eduardo<span class="accent">.</span></a>
-      <ul class="nav-links" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-      <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode">
-        <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-        <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none">
-          <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-      </button>
-    </div>
+  <header class="site-header">
+    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Eduardo Brito</a></h1>
+    <p class="tagline">Cybersecurity &amp; IT student, actively seeking entry-level roles</p>
+    <p class="tagline">Mertert, Luxembourg</p>
+    <p class="header-links">
+      <a href="https://github.com/idoaredo" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+      <a href="https://linkedin.com/in/idoaredo" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+      <a href="mailto:eduardograndidebrito@gmail.com">Email</a>
+    </p>
+  </header>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <span class="nav-links-group">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+    </span>
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">[dark]</button>
   </nav>
 
   <main id="main-content">
 
-    <header class="page-header">
-      <div class="container">
-        <h1>Blog</h1>
-        <p>Notes, writeups, and thoughts on cybersecurity topics.</p>
-      </div>
-    </header>
+    <div class="page-title">
+      <h1>Blog</h1>
+      <p>Notes, writeups, and thoughts on cybersecurity.</p>
+    </div>
 
-    <section class="section">
-      <div class="container">
-
-        <p class="placeholder-text" style="text-align: center;">
-          Articles and writeups coming soon.
-        </p>
-
-      </div>
+    <section>
+      <p style="color: var(--muted); font-style: italic; font-size: 0.9rem;">Articles coming soon.</p>
     </section>
 
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <p>&copy; 2026 Eduardo Grandide Brito. All rights reserved.</p>
-      <p>Built with HTML, CSS &amp; JavaScript.</p>
-    </div>
+    <p>© 2026 Eduardo Grandide Brito ·
+      <a href="https://github.com/idoaredo/idoaredo.github.io" target="_blank" rel="noopener noreferrer">Source on GitHub</a>
+    </p>
   </footer>
 
   <script src="assets/js/script.js" defer></script>

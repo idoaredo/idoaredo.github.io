@@ -1,112 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-    if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
-  </script>
+  <script>if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Projects — Eduardo's Cybersecurity Portfolio. Hands-on labs, tools, and research." />
+  <meta name="description" content="Projects — Eduardo Grandide Brito. Hands-on tools, labs, and research in cybersecurity." />
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self';
              script-src 'self' 'unsafe-inline';
-             style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-             font-src https://fonts.gstatic.com;
+             style-src 'self' 'unsafe-inline';
              img-src 'self' data:;
              object-src 'none';
              base-uri 'self';" />
-  <title>Projects — Eduardo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <title>Projects — Eduardo Grandide Brito</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">eduardo<span class="accent">.</span></a>
-      <ul class="nav-links" role="list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-      <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode">
-        <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-        <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none">
-          <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-      </button>
-    </div>
+  <header class="site-header">
+    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Eduardo Brito</a></h1>
+    <p class="tagline">Cybersecurity &amp; IT student, actively seeking entry-level roles</p>
+    <p class="tagline">Mertert, Luxembourg</p>
+    <p class="header-links">
+      <a href="https://github.com/idoaredo" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+      <a href="https://linkedin.com/in/idoaredo" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+      <a href="mailto:eduardograndidebrito@gmail.com">Email</a>
+    </p>
+  </header>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <span class="nav-links-group">
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="blog.html">Blog</a>
+    </span>
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">[dark]</button>
   </nav>
 
   <main id="main-content">
 
-    <header class="page-header">
-      <div class="container">
-        <h1>Projects</h1>
-        <p>Hands-on labs, tools, and research in cybersecurity.</p>
-      </div>
-    </header>
+    <div class="page-title">
+      <h1>Projects</h1>
+      <p>Hands-on tools, labs, and research.</p>
+    </div>
 
-    <section class="section">
-      <div class="container">
-        <div class="projects-grid">
-
-          <article id="project-autoprompt" class="project-card">
-            <div class="project-card-header">
-              <div class="project-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/idoaredo/idoaredo.github.io" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="GitHub repository">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-                  </svg>
-                </a>
-                <a href="autoprompt/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live demo">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="project-date">2025-05-01</div>
-            <h3><a href="autoprompt/" target="_blank" rel="noopener noreferrer">AutoPrompt</a></h3>
-            <p class="project-desc">Prompt engineering generator for Text, Image, Audio, Video and Code — with multi-agent mode, social media destination panel, and responsible AI guardrails. Fully offline, zero dependencies.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Prompt Engineering</span>
-              <span class="tech-tag">AI</span>
-            </div>
-          </article>
-
-
-        </div>
+    <section>
+      <div class="project-entry">
+        <p>
+          <strong><a href="autoprompt/index.html">AutoPrompt</a></strong>
+          <span class="meta"> — 2025 ·
+            <a href="https://github.com/idoaredo/idoaredo.github.io" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+            <a href="autoprompt/index.html" target="_blank" rel="noopener noreferrer">Live</a>
+          </span>
+        </p>
+        <p>
+          Prompt engineering generator for Text, Image, Audio, Video and Code — with multi-agent mode,
+          social media destination panel, and responsible AI guardrails. Fully offline, zero dependencies.
+        </p>
+        <p class="tags">HTML · CSS · JavaScript · Prompt Engineering · AI</p>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <p>&copy; 2026 Eduardo Grandide Brito. All rights reserved.</p>
-      <p>Built with HTML, CSS &amp; JavaScript.</p>
-    </div>
+    <p>© 2026 Eduardo Grandide Brito ·
+      <a href="https://github.com/idoaredo/idoaredo.github.io" target="_blank" rel="noopener noreferrer">Source on GitHub</a>
+    </p>
   </footer>
 
   <script src="assets/js/script.js" defer></script>
