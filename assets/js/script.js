@@ -1,76 +1,25 @@
-// Persistent theme
-(function() {
-  const t = localStorage.getItem('theme');
-  if (t === 'dark') document.documentElement.classList.add('dark');
-})();
-
-// Toggle dark/light
+// Dark mode toggle
 const toggle = document.getElementById('dark-mode-toggle');
-toggle.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark');
-  const current = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-  localStorage.setItem('theme', current);
-});
+const moon   = document.getElementById('icon-moon');
+const sun    = document.getElementById('icon-sun');
 
-// Search toggle and functionality
-const searchBtn = document.querySelector('.search-btn');
-const navContainer = document.querySelector('.nav-container');
-const searchInput = document.getElementById('search-input');
-
-function performSearch(query) {
-  // Projects entries
-  document.querySelectorAll('.project-entry').forEach(entry => {
-    const text = entry.querySelector('h3').innerText.toLowerCase();
-    entry.style.display = (!query || text.includes(query)) ? '' : 'none';
-  });
-  // Blog links
-  document.querySelectorAll('.blog-list li').forEach(li => {
-    const text = li.innerText.toLowerCase();
-    li.style.display = (!query || text.includes(query)) ? '' : 'none';
-  });
+function applyTheme(isDark) {
+  document.documentElement.classList.toggle('dark', isDark);
+  moon.style.display = isDark ? 'none'  : '';
+  sun.style.display  = isDark ? ''      : 'none';
 }
 
-searchBtn.addEventListener('click', () => {
-  if (navContainer.classList.contains('search-active')) {
-    // Hide input and clear search
-    navContainer.classList.remove('search-active');
-    searchInput.value = '';
-    performSearch('');
-  } else {
-    navContainer.classList.add('search-active');
-    searchInput.focus();
-  }
+applyTheme(localStorage.getItem('theme') === 'dark');
+
+toggle.addEventListener('click', () => {
+  const isDark = !document.documentElement.classList.contains('dark');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  applyTheme(isDark);
 });
 
-searchInput.addEventListener('input', () => {
-  const query = searchInput.value.toLowerCase().trim();
-  if (!query) {
-    // Hide search input when empty
-    navContainer.classList.remove('search-active');
-  }
-  performSearch(query);
-});
-
-// Typed.js initialization
-document.addEventListener('DOMContentLoaded', () => {
-  new Typed('#typed', {
-    strings: ['Cybersecurity Researcher', 'Penetration Tester', 'Security Analyst'],
-    typeSpeed: 100,
-    backSpeed: 50,
-    loop: true
-  });
-  particlesJS('particles-js', {
-    particles: { number:{value:50}, size:{value:3} },
-    interactivity:{ events:{ onhover:{enable:true, mode:'repulse'} } }
-  });
-});
-
-
-// Close search when clicking outside
-document.addEventListener('click', function(e) {
-  if (navContainer.classList.contains('search-active') && !navContainer.contains(e.target)) {
-    searchInput.value = '';
-    performSearch('');
-    navContainer.classList.remove('search-active');
+// Mark active nav link based on current page
+document.querySelectorAll('.nav-links a').forEach(link => {
+  if (link.href === location.href) {
+    link.setAttribute('aria-current', 'page');
   }
 });

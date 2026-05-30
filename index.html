@@ -1,59 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-  (function() {
-    var t = localStorage.getItem('theme');
-    if (t === 'dark') {
-      document.documentElement.classList.add('dark');
-    }
-  })();
-</script>
-
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>idoaredo - Cybersecurity Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <script>
+    if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Eduardo — Cybersecurity Portfolio. Risk mitigation, incident response, and data governance." />
+  <meta property="og:title" content="Eduardo — Cybersecurity Portfolio" />
+  <meta property="og:description" content="Exploring risk mitigation, incident response, and continuous security improvement." />
+  <meta property="og:type" content="website" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';
+             script-src 'self' 'unsafe-inline';
+             style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+             font-src https://fonts.gstatic.com;
+             img-src 'self' data:;
+             object-src 'none';
+             base-uri 'self';" />
+  <title>Eduardo — Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  
+</head>
+<body>
 
-  <script src="assets/js/typed.min.js" defer></script><script src="assets/js/particles.min.js" defer></script><script src="assets/js/script.js" defer></script>
-</head><body>
-<main>
-<nav class="navbar">
-  <div class="container nav-container">
-    <span class="logo">eduardo - portfolio</span>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="blog.html">Blog</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="icon-btn search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
-      <input type="text" id="search-input" class="search-input" placeholder="Search experiments..." />
-      <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">eduardo<span class="accent">.</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode">
+        <!-- Moon -->
+        <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <!-- Sun (hidden by default) -->
+        <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:none">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
     </div>
-  </div>
-</nav>
-<section id="home" class="hero"><div id="particles-js"></div>
-  <div class="hero-content">
-    <h1>Olá! I'm Eduardo!</h1>
-    <h2><span id="typed"></span></h2>
-    <p class="hero-about">
-I am an eager learner with a deep passion for the field of cybersecurity, and it is an honor to have you explore my portfolio/repository. My motivation for entering this field stems primarily from frustrating personal experiences: I was a victim of several cyberattacks in the past due to my lack of understanding of digital security risks. Even today, I still face threats, which only strengthens my desire to ensure that others do not go through the same situations.<br><br>
-I have been working hard to progress in this journey, firmly believing in the power of continuous effort and learning. I am a dedicated, detail-oriented, and meticulous professional with a strong appreciation for analytical thinking and patience.<br><br>
-Currently, I am pursuing a postgraduate degree in Cybersecurity and Data Governance while also complementing my education with additional courses to further deepen my knowledge. The purpose of this repository is to share my practical experiences and learnings on risk mitigation, incident response, and continuous process improvement in the field of cybersecurity.<br><br>
-I believe that cybersecurity is a dynamic field that requires constant learning, and I am committed to contributing to creating safer and more secure environments.
-</p>
-    <div class="social">
-      <a href="https://github.com/idoaredo" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/idoaredo" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <section id="home" class="hero">
+      <div class="container">
+        <p class="hero-eyebrow">Hello, I'm</p>
+        <h1>Eduardo<span class="accent">.</span></h1>
+        <div class="hero-role" aria-label="Cybersecurity Researcher, Penetration Tester, Security Analyst">
+          <span class="role-item" style="--delay: 0s">Cybersecurity Researcher</span>
+          <span class="role-item" style="--delay: 3s">Penetration Tester</span>
+          <span class="role-item" style="--delay: 6s">Security Analyst</span>
+        </div>
+        <p class="hero-bio">
+          I study risk mitigation, incident response, and continuous process improvement in cybersecurity.
+          Currently pursuing a postgraduate degree in Cybersecurity and Data Governance.
+        </p>
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        </div>
+        <div class="social">
+          <!-- GitHub -->
+          <a href="https://github.com/idoaredo" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/idoaredo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── About ──────────────────────────────────────── -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am an eager learner with a deep passion for cybersecurity. My motivation for entering this field
+              stems from personal experience — I was a victim of several cyberattacks due to my lack of understanding
+              of digital security risks, and I am determined that others don't go through the same.
+            </p>
+            <p>
+              I am a dedicated, detail-oriented professional with a strong appreciation for analytical thinking and
+              patience. Currently pursuing a <strong>postgraduate degree in Cybersecurity and Data Governance</strong>,
+              complemented by specialized courses to further deepen my knowledge.
+            </p>
+            <p>
+              The purpose of this portfolio is to share my practical experiences and learnings on risk mitigation,
+              incident response, and continuous process improvement in cybersecurity.
+            </p>
+          </div>
+          <div class="about-focus">
+            <h3>Focus Areas</h3>
+            <ul class="focus-list">
+              <li>Risk Mitigation</li>
+              <li>Incident Response</li>
+              <li>Penetration Testing</li>
+              <li>Data Governance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Skills ─────────────────────────────────────── -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills &amp; Tools</h2>
+        <p class="section-subtitle">Technologies and tools I work with — being updated.</p>
+        <div class="skills-grid" id="skills-grid">
+          <!-- Skills will be added here -->
+          <span class="skill-tag placeholder-text">Coming soon…</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Certifications ─────────────────────────────── -->
+    <section id="certifications" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">Credentials and training completed.</p>
+        <div class="certs-grid" id="certs-grid">
+          <!-- Certifications will be added here -->
+          <p class="placeholder-text">Certifications will be listed here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Featured Projects ──────────────────────────── -->
+    <section id="featured" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">A selection of work in cybersecurity.</p>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub repository">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-date">2025-01-10</div>
+            <h3><a href="projects.html#project-network-packet-analyzer">Network Packet Analyzer</a></h3>
+            <p class="project-desc">A tool to capture and analyze network traffic patterns in real-time.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Scapy</span>
+              <span class="tech-tag">Wireshark</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub repository">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-date">2025-02-05</div>
+            <h3><a href="projects.html#project-vulnerability-scanner">Web App Vulnerability Scanner</a></h3>
+            <p class="project-desc">Automated scanner to detect common web vulnerabilities (OWASP Top 10).</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">OWASP</span>
+              <span class="tech-tag">Burp Suite</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub repository">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-date">2025-04-01</div>
+            <h3><a href="projects.html#project-malware-sandbox">Malware Sandbox Environment</a></h3>
+            <p class="project-desc">Isolated virtual environment for safe malware analysis and behavior observation.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">VirtualBox</span>
+              <span class="tech-tag">Linux</span>
+              <span class="tech-tag">Cuckoo</span>
+            </div>
+          </article>
+
+        </div>
+        <div class="section-cta">
+          <a href="projects.html" class="btn btn-outline">View All Projects →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact ────────────────────────────────────── -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="contact-text">
+          I'm open to opportunities, collaborations, and conversations about cybersecurity.
+          Whether it's a question, a project idea, or just to connect — my inbox is open.
+        </p>
+        <a href="mailto:eduardograndidebrito@gmail.com" class="btn btn-primary">Say Hello</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Eduardo Grandide Brito. All rights reserved.</p>
+      <p>Built with HTML, CSS &amp; JavaScript.</p>
     </div>
-  </div>
-</section>
-</main>
-<footer>
-  <div class="container"><p>&copy; 2025 idoaredo. All rights reserved.</p></div>
-</footer>
-</body></html>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>
