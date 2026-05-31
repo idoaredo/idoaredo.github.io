@@ -112,6 +112,24 @@ h2 {
   margin-right: 0.75rem;
 }
 
+/* ── Post ────────────────────────────────────────────────── */
+.post-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0.25rem;
+}
+.post-meta {
+  display: block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 1.75rem;
+}
+
 /* ── Page headers ────────────────────────────────────────── */
 .page-title { margin-bottom: 2rem; }
 .page-title h1 {
