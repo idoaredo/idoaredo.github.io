@@ -1138,6 +1138,12 @@ function escHtml(s) {
 function safeAttr(s) {
   return String(s).replace(/[^a-zA-Z0-9_:\-\.]/g, '');
 }
+// escJsStr: for strings placed inside a JS string literal within an HTML attribute (e.g. onclick).
+// escHtml alone is not enough there: the browser decodes entities (&#39; → ') BEFORE parsing the JS,
+// so a quote could still break out of the literal. Escape for JS first, then for HTML.
+function escJsStr(s) {
+  return escHtml(String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'"));
+}
 // debounce: returns a throttled version of fn, firing after `ms` ms of inactivity (Sprint 15)
 function debounce(fn, ms) {
   let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); };
@@ -2567,7 +2573,7 @@ function renderCodeDescSuggestions() {
   const el = document.getElementById('code-desc-chips');
   const lbl = document.getElementById('lbl-code-desc-sug');
   if(!el) return;
-  el.innerHTML = sugs.map(s => `<button class="sug-chip" onclick="applySuggestion('code-desc','${escHtml(s)}')">${escHtml(s)}</button>`).join('');
+  el.innerHTML = sugs.map(s => `<button class="sug-chip" onclick="applySuggestion('code-desc','${escJsStr(s)}')">${escHtml(s)}</button>`).join('');
   if(lbl) lbl.style.display = sugs.length ? '' : 'none';
 }
 
@@ -3903,7 +3909,7 @@ function renderFwForm() {
     const inpF = fields.find(f=>f.id==='input');
     const sysSugs = FW_SUGGESTIONS[l]?.FewShot?.sys || [];
     const inpSugs = FW_SUGGESTIONS[l]?.FewShot?.input || [];
-    const makeSug = (sugs, fid) => sugs.length ? `<span class="sug-label">${l==='pt'?'💡 Sugestões:':'💡 Suggestions:'}</span><div class="sug-row">${sugs.map(s=>`<button class="sug-chip" onclick="applySuggestion('${safeAttr(fid)}','${escHtml(s)}')">${escHtml(s)}</button>`).join('')}</div>` : '';
+    const makeSug = (sugs, fid) => sugs.length ? `<span class="sug-label">${l==='pt'?'💡 Sugestões:':'💡 Suggestions:'}</span><div class="sug-row">${sugs.map(s=>`<button class="sug-chip" onclick="applySuggestion('${safeAttr(fid)}','${escJsStr(s)}')">${escHtml(s)}</button>`).join('')}</div>` : '';
     html += `<div class="field">
       <label>${escHtml(sysF.label)} <span class="lopt">${L[l].opt}</span></label>
       <textarea id="sys" rows="${sysF.rows}" placeholder="${sysF.ph}" oninput="liveTokenUpdate()"></textarea>
@@ -3918,7 +3924,7 @@ function renderFwForm() {
   } else {
     fields.forEach(f => {
       const sugs = FW_SUGGESTIONS[l]?.[S.fw]?.[f.id] || [];
-      const sugHtml = sugs.length ? `<span class="sug-label">${l==='pt'?'💡 Sugestões:':'💡 Suggestions:'}</span><div class="sug-row">${sugs.map(s=>`<button class="sug-chip" onclick="applySuggestion('${escHtml(f.id)}','${escHtml(s)}')">${escHtml(s)}</button>`).join('')}</div>` : '';
+      const sugHtml = sugs.length ? `<span class="sug-label">${l==='pt'?'💡 Sugestões:':'💡 Suggestions:'}</span><div class="sug-row">${sugs.map(s=>`<button class="sug-chip" onclick="applySuggestion('${safeAttr(f.id)}','${escJsStr(s)}')">${escHtml(s)}</button>`).join('')}</div>` : '';
       html += `<div class="field">
         <label>${escHtml(f.label)}${f.opt?` <span class="lopt">${L[l].opt}</span>`:''}</label>
         <textarea id="${f.id}" rows="${f.rows}" maxlength="4000" placeholder="${f.ph}" oninput="liveTokenUpdate()"></textarea>
