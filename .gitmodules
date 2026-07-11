@@ -1,0 +1,3 @@
+[submodule "autoprompt"]
+	path = autoprompt
+	url = https://github.com/idoaredo/autoprompt.git
